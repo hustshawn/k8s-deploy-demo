@@ -1,3 +1,7 @@
 resources:
 - deployment.yaml
 - service.yaml
+
+images:
+- name: hustshawn/k8s-demo
+  newTag: main
