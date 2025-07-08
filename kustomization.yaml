@@ -4,4 +4,4 @@ resources:
 
 images:
 - name: hustshawn/k8s-demo
-  newTag: main
+  newTag: 20250708-155144
