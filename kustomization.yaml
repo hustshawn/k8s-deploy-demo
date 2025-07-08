@@ -3,5 +3,5 @@ resources:
 - service.yaml
 
 images:
-- name: hustshawn/k8s-demo
-  newTag: 20250708-155144
+- name: ghcr.io/hustshawn/k8s-demo
+  newTag: main
