@@ -4,4 +4,4 @@ resources:
 
 images:
 - name: ghcr.io/hustshawn/k8s-demo
-  newTag: 20250708-163917
+  newTag: 20250709-033512
