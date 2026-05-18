@@ -20,7 +20,7 @@ spec:
         app: backend
     spec:
       containers:
-      - image: ghcr.io/hustshawn/k8s-demo:v0.1.0
+      - image: ghcr.io/hustshawn/k8s-demo:20250709-035325
         imagePullPolicy: Always
         name: backend
         ports:
