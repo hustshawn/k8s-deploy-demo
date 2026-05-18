@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backend
+  name: backend-app
+  namespace: kargo-demo-uat
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - image: ghcr.io/hustshawn/k8s-demo:v0.1.0
+        imagePullPolicy: Always
+        name: backend
+        ports:
+        - containerPort: 8080
+          name: http
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 250m
+            memory: 512Mi
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      restartPolicy: Always
